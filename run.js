@@ -101,7 +101,10 @@ const questions = () => {
           engineerAnswers.engineerGitHub
         );
         const engineerString = JSON.stringify(engineerAnswers);
-        fs.appendFile("./employees.json", engineerString, (err) => {
+        fs.appendFile("./employees.json", `
+        ${engineerString},
+        
+        `,(err) => {
           err ? console.log(err) : console.log("Engineer Created!")
         });
         questions();
@@ -115,12 +118,17 @@ const questions = () => {
           internAnswers.internSchool
         );
         const internString = JSON.stringify(internAnswers);
-        fs.appendFile("./employees.json", internString, (err) => {
+        fs.appendFile("./employees.json", `
+        ${internString},
+        `, (err) => {
           err ? console.log(err) : console.log("Intern Created!")
         });
         questions();
       });
     } else {
+      fs.appendFile("./employees.json", `{}]`, (err) => {
+        err ? console.log(err) : console.log("Team Complete!")
+      });
       return;
     }
   });
@@ -137,7 +145,9 @@ const questions = () => {
       managerAnswers.managerOfficeNumber
     );
     const managerString = JSON.stringify(managerAnswers);
-    fs.writeFile('./employees.json', managerString, (err) => {
+    fs.writeFile('./employees.json', `[
+    ${managerString},
+    `, (err) => {
       err ? console.log(err) : console.log("Manager Created!")
     });
     questions();
