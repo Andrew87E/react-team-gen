@@ -104,7 +104,7 @@ const questions = () => {
         fs.appendFile("./employees.json", `
         ${engineerString},
         
-        `,(err) => {
+        `, (err) => {
           err ? console.log(err) : console.log("Engineer Created!")
         });
         questions();
