@@ -3,6 +3,7 @@ const fs = require("fs");
 const Manager = require("./utils/Manager");
 const Engineer = require("./utils/Engineer");
 const Intern = require("./utils/Intern");
+let emptyArr = [];
 // const Employee = require("./Employee");
 // const render = require("./htmlRenderer");
 
@@ -94,39 +95,29 @@ const questions = () => {
   inquirer.prompt(selectQuestions).then((selectAnswers) => {
     if (selectAnswers.addTeamMember === "Engineer") {
       inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
-        new Engineer(
+        const newEngineer = new Engineer(
           engineerAnswers.engineerName,
           engineerAnswers.engineerId,
           engineerAnswers.engineerEmail,
           engineerAnswers.engineerGitHub
         );
-        const engineerString = JSON.stringify(engineerAnswers);
-        fs.appendFile("./employees.json", `
-        ${engineerString},
-        
-        `, (err) => {
-          err ? console.log(err) : console.log("Engineer Created!")
-        });
+          emptyArr.push(newEngineer)
         questions();
       });
     } else if (selectAnswers.addTeamMember === "Intern") {
       inquirer.prompt(internQuestions).then((internAnswers) => {
-        new Intern(
+        const newIntern = new Intern(
           internAnswers.internName,
           internAnswers.internId,
           internAnswers.internEmail,
           internAnswers.internSchool
         );
-        const internString = JSON.stringify(internAnswers);
-        fs.appendFile("./employees.json", `
-        ${internString},
-        `, (err) => {
-          err ? console.log(err) : console.log("Intern Created!")
-        });
+          emptyArr.push(newIntern)
         questions();
       });
     } else {
-      fs.appendFile("./employees.json", `{}]`, (err) => {
+      const employeesString = JSON.stringify(emptyArr, null, 2);
+      fs.writeFile("./src/db/employees.json", employeesString, (err) => {
         err ? console.log(err) : console.log("Team Complete!")
       });
       return;
@@ -138,18 +129,13 @@ const questions = () => {
 
 (() => {
   inquirer.prompt(managerQuestions).then((managerAnswers) => {
-    new Manager(
+    const newManager = new Manager(
       managerAnswers.managerName,
       managerAnswers.managerId,
       managerAnswers.managerEmail,
       managerAnswers.managerOfficeNumber
     );
-    const managerString = JSON.stringify(managerAnswers);
-    fs.writeFile('./employees.json', `[
-    ${managerString},
-    `, (err) => {
-      err ? console.log(err) : console.log("Manager Created!")
-    });
+      emptyArr.push(newManager)
     questions();
   });
 })();
