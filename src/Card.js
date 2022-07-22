@@ -29,7 +29,7 @@ function Card() {
             }
         })();
         return (
-            <div className="w-full cursor-pointer rounded-md shadow-md shadow-gray-200 hover:shadow-blue-400/80 hover:shadow-2xl hover:bg-gray-50">
+            <div key={Employee.id} className="w-full cursor-pointer rounded-md shadow-md shadow-gray-200 hover:shadow-blue-400/80 hover:shadow-2xl hover:bg-gray-50">
                 <div className="p-4">
                     <span className="text-blue-600 font-normal text-5xl">{employeeRole}</span>
                     <p className="font-semibold text-xl py-2">{enployeeName}</p>
