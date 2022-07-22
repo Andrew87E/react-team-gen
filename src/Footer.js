@@ -110,7 +110,7 @@ function Footer() {
             </div>
 
             <div className="text-center p-4">
-                © 2021 Made with <span className="text-red-500">❤</span> by:
+                © 2022 Made with <span className="text-red-500">❤</span> by:
                 <a className="text-whitehite" href="https://github.com/andrew87e"> Andrew Edwards</a>
             </div>
         </footer>

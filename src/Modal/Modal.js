@@ -8,6 +8,7 @@ import $ from "jquery";
 function Modal() {
     const [showModal, setShowModal] = useState(false);
     const [formState, setFormState] = useState(false);
+    const [showmodalBtn, setModalButton] = useState(false);
     const selectedOption = $('.form-select');
     const selectedOptionValue = selectedOption.val();
 
@@ -26,9 +27,12 @@ function Modal() {
         setFormState(false)
     }
 
-    const handleSubmit = () => {
-
-    }
+    // const handleSubmit = () => {
+    //api post here
+    // if state === manager post manager obj
+    // else if state === engineer obj
+    //else if state === intern obj
+    // }
 
     // Helper function to clear out the review form after submission
 // const emptyForm = () => {
@@ -84,13 +88,9 @@ function Modal() {
                                 </div>
                                     {
                                         formRender()
+
                                     }
                                     <div>
-                                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                                        onClick={handleSubmit()}
-                                        >
-                                            Submit
-                                        </button>
                                     </div>
                             </form>
                         </div>
@@ -98,11 +98,12 @@ function Modal() {
                 </div>
             </div>) : null}
 
-            <button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"
+            {showmodalBtn ? (<button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"
                 onClick={() => setShowModal(true)}
+                
             >
                 Add Another Employee
-            </button>
+            </button>) : null}
         </>
     );
 
