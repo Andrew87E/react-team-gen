@@ -139,7 +139,3 @@ const questions = () => {
     questions();
   });
 })();
-
-// const newGuy = new Engineer(Andrew, 47, blah@me.com, andrew87e)
-// newGuy.getRole()
-// newGuy.getGithub()
