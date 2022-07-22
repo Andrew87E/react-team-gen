@@ -3,9 +3,9 @@
 function Footer() {
     return (
         <footer class="text-center bg-gray-900 text-white">
-            <div class="container px-6 pt-6">
+            <div class="justify-center px-6 pt-6">
                 <div class="flex justify-center mb-1">
-                    <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="https://www.facebook.com/andrew87edwards/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
@@ -22,7 +22,7 @@ function Footer() {
                         </svg>
                     </a>
 
-                    <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="https://twitter.com/Siesta6689" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
@@ -39,14 +39,14 @@ function Footer() {
                         </svg>
                     </a>
 
-                    <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="mailto: andrew87e@gmail.com" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
                             data-icon="google"
                             class="w-3 h-full mx-auto"
                             role="img"
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="mailto: andrew87e@gmail.com"
                             viewBox="0 0 488 512"
                         >
                             <path
@@ -56,14 +56,14 @@ function Footer() {
                         </svg>
                     </a>
 
-                    <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="https://www.instagram.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
                             data-icon="instagram"
                             class="w-3 h-full mx-auto"
                             role="img"
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="https://www.instagram.com/"
                             viewBox="0 0 448 512"
                         >
                             <path
@@ -73,14 +73,14 @@ function Footer() {
                         </svg>
                     </a>
 
-                    <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="https://www.linkedin.com/in/andrew-edwards-34a927a5/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
                             data-icon="linkedin-in"
                             class="w-3 h-full mx-auto"
                             role="img"
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="https://www.linkedin.com/in/andrew-edwards-34a927a5/"
                             viewBox="0 0 448 512"
                         >
                             <path
@@ -90,14 +90,14 @@ function Footer() {
                         </svg>
                     </a>
 
-                    <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="https://github.com/andrew87e" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
                             data-icon="github"
                             class="w-3 h-full mx-auto"
                             role="img"
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="https://github.com/andrew87e"
                             viewBox="0 0 496 512"
                         >
                             <path

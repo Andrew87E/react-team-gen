@@ -1,5 +1,5 @@
 export const JumbotronPage = () => (
-    <Jumbotron className="text-center text-white bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
+    <Jumbotron className="text-center text-white bg-gradient-to-r from-gray-900 via-gray-800 to-slate-800">
       <h1 className="text-2xl md:text-4xl mb-3">Our Team</h1>
       <p className="mb-3">
             This page was built with React and Tailwind CSS!
