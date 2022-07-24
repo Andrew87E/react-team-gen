@@ -7,7 +7,7 @@
   "author": "Andrew87E <106359255+Andrew87E@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
-  "scripts":{
+  "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js"
   },
@@ -15,6 +15,7 @@
     "colors": "^1.4.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
     "mongoose": "^6.4.6"
   }
 }
