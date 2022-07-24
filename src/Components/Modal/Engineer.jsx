@@ -1,26 +1,19 @@
 import Modal from "./Modal"
 import Employees from '../db/employees.json'
+import axios from "axios"
+import { useState, useEffect, useCallback } from "react"
 
-
-
+// 1x3XYtADa3SW1ozv7EiAhMc_cnJLOk4Y_dO7sjNMrigE
 
 export default function Engineer() {
 const emplyeeArr = [Employees]
-
-
-function handleSubmit() {
-    const saveEngineer = (Engineer) =>
-  fetch('/api/Engineers', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(Engineer),
-  });
-
-
+const api = axios.create({
+    baseURL: ``
+})
+handleSubmit(e){
 
 }
+
 
 
     return (

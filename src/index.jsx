@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
-// import reportWebVitals from './reportWebVitals';
-import { JumbotronPage } from './Jumbotron';
-import Card from './Card';
-import Footer from './Footer';
-import Modal from './Modal/Modal';
-import Login from './login/Login';
+import { JumbotronPage } from './Components/Jumbotron';
+import Card from './Components/Card';
+import Footer from './Components/Footer';
+import Modal from './Components/Modal/Modal';
+import Login from './Components/login/Login';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

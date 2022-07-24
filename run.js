@@ -117,7 +117,7 @@ const questions = () => {
       });
     } else {
       const employeesString = JSON.stringify(emptyArr, null, 2);
-      fs.writeFile("./src/db/employees.json", employeesString, (err) => {
+      fs.writeFile("./employees.json", employeesString, (err) => {
         err ? console.log(err) : console.log("Team Complete!")
       });
       return;
