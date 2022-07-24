@@ -3,6 +3,9 @@
 #api-key
 secret.ts
 
+#test-files
+testPost.ts
+
 # dependencies
 /node_modules
 /.pnp
