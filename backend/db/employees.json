@@ -1,32 +1,37 @@
 [
-  [
-    [
-      {
-        "name": "Brattney",
-        "id": "696",
-        "email": "brattney@yahoo.com",
-        "officeNumber": "789"
-      },
-      {
-        "name": "Andrew",
-        "id": "6966",
-        "email": "andrew@me.com",
-        "gitHub": "andrew87e"
-      },
-      {
-        "name": "somebody",
-        "id": "879964",
-        "email": "asfdl;jh@dsfljk",
-        "school": "dsal;jkfh"
-      }
-    ],
-    {
-      "name": "somebody else",
-      "id": "87996sdaf4",
-      "email": "asasdklfjhh@dsfljk",
-      "school": "dsal;jkfhasdlkjf;hlkj"
-    }
-  ],
+  {
+    "name": "Brattney",
+    "id": "696",
+    "email": "brattney@yahoo.com",
+    "officeNumber": "789"
+  },
+  {
+    "name": "Andrew",
+    "id": "6966",
+    "email": "andrew@me.com",
+    "gitHub": "andrew87e"
+  },
+  {
+    "name": "somebody",
+    "id": "879964",
+    "email": "asfdl;jh@dsfljk",
+    "school": "dsal;jkfh"
+  },
+
+  {
+    "name": "somebody else",
+    "id": "87996sdaf4",
+    "email": "asasdklfjhh@dsfljk",
+    "school": "dsal;jkfhasdlkjf;hlkj"
+  },
+
+  {
+    "name": "this guy here",
+    "id": "7896",
+    "email": "isatesth@test.com",
+    "officeNumber": "789"
+  },
+
   {
     "name": "this guy here",
     "id": "7896",
