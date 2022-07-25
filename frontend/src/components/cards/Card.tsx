@@ -1,13 +1,21 @@
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 function Card() {
-  const Employees = async () => {
-    const response = await axios.get("http://localhost:3001/api/employees");
-    const employeeResponse = JSON.stringify(response.data, null, 2);
-    //renderCard() for each employee in emplyeeResponse
-    console.log(employeeResponse);
-    return employeeResponse;
-  };
+
+React.useEffect(() => {
+  axios.get("/api/employees")
+    .then(res => {
+      console.log(res);
+    }
+    )
+    .catch(err => {
+      console.log(err);
+    }
+    )
+}
+, []);
+
 
 //   function renderCard(Employee) {
 //     const employeeID = Employee.id;
