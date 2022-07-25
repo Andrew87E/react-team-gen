@@ -21,8 +21,8 @@ const setEmployee = asyncHandler(async (req, res) => {
     employeeArr.push(employees)
     employeeArr.push(newEmployee)
     const employeesString = JSON.stringify(employeeArr, null, 2)
-    fs.writeFileSync(path.join(__dirname, '../db/employees.json'), employeesString, (err) => {
-        err ? console.log(err) : console.log('employee added')
+    fs.writeFile('../db/employees.json', employeesString, (err) => {
+      err ? console.error(err) : console.log('This worked!')
     })
     res.status(201).json(newEmployee)
     console.info('New employee added to db'.green)
