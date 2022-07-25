@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const colors = require('colors')
 const employees = require('../db/employees.json')
+const { readFromFile, readAndAppend } = require('../helpers/fsUtils')
 
 //get employees from db
 //route GET /api/employees
@@ -17,16 +18,9 @@ const getEmployees = asyncHandler(async (req, res) => {
 const setEmployee = asyncHandler(async (req, res) => {
     const { name, id, email, officeNumber, gitHub, school } = req.body
     const newEmployee = { name, id, email, officeNumber, gitHub, school }
-    const employeeArr = []
-    employeeArr.push(employees)
-    employeeArr.push(newEmployee)
-    const employeesString = JSON.stringify(employeeArr, null, 2)
-    fs.writeFile('../db/employees.json', employeesString, (err) => {
-      err ? console.error(err) : console.log('This worked!')
-    })
-    res.status(201).json(newEmployee)
-    console.info('New employee added to db'.green)
-}
+    readAndAppend(newEmployee, '../db/employees.json')
+    res.json('employee added successfully')
+  }
 )
 //update employee from db by ID
 //route PUT /api/employees 
