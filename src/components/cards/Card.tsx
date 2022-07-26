@@ -1,48 +1,33 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Employees from "../../../db/employees.json";
 
-function Card() {
+export default function Card() {
+  function renderCard(Employee) {
+    const employeeID = Employee.id;
+    const enployeeName = Employee.name;
+    const employeeEmail = Employee.email;
+    // const employeeGit = Employees[0].gitHub;
+    // const employeeSchool = Employees[0].school;
+    // const employeeOfficeNumber = Employees[0].officeNumber;
+    const employeeUnique = (() => {
+      if (Employee.hasOwnProperty("gitHub")) {
+        return `https://github.com/${Employee.gitHub}`;
+      } else if (Employee.hasOwnProperty("officeNumber")) {
+        return `Office: ${Employee.officeNumber}`;
+      } else if (Employee.hasOwnProperty("school")) {
+        return `Currently enrolled at: ${Employee.school}`;
+      }
+    })();
 
-React.useEffect(() => {
-  axios.get("/api/employees")
-    .then(res => {
-      console.log(res);
-    }
-    )
-    .catch(err => {
-      console.log(err);
-    }
-    )
-}
-, []);
-
-
-//   function renderCard(Employee) {
-//     const employeeID = Employee.id;
-//     const enployeeName = Employee.name;
-//     const employeeEmail = Employee.email;
-//     // const employeeGit = Employees[0].gitHub;
-//     // const employeeSchool = Employees[0].school;
-//     // const employeeOfficeNumber = Employees[0].officeNumber;
-//     const employeeUnique = (() => {
-//       if (Employee.hasOwnProperty("gitHub")) {
-//         return `https://github.com/${Employee.gitHub}`;
-//       } else if (Employee.hasOwnProperty("officeNumber")) {
-//         return `Office: ${Employee.officeNumber}`;
-//       } else if (Employee.hasOwnProperty("school")) {
-//         return `Currently enrolled at: ${Employee.school}`;
-//       }
-//     })();
-
-    // const employeeRole = (() => {
-    //   if (Employee.hasOwnProperty("gitHub")) {
-    //     return "Engineer";
-    //   } else if (Employee.hasOwnProperty("officeNumber")) {
-    //     return "Manager";
-    //   } else if (Employee.hasOwnProperty("school")) {
-    //     return "Intern";
-    //   }
-    // })();
+    const employeeRole = (() => {
+      if (Employee.hasOwnProperty("gitHub")) {
+        return "Engineer";
+      } else if (Employee.hasOwnProperty("officeNumber")) {
+        return "Manager";
+      } else if (Employee.hasOwnProperty("school")) {
+        return "Intern";
+      }
+    })();
     return (
       <div
         key={Employee.id}
@@ -85,5 +70,4 @@ React.useEffect(() => {
     </div>
   );
 }
-
-export default Card;
+// Language: typescript
