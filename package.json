@@ -1,25 +1,58 @@
 {
-  "name": "team-gen",
-  "version": "1.0.0",
-  "description": "a team page generator written in the MERN stack",
-  "main": "server.js",
-  "repository": "https://github.com/Andrew87E/react-team-gen.git",
-  "author": "Andrew87E <106359255+Andrew87E@users.noreply.github.com>",
-  "license": "MIT",
+  "name": "firebase-team-gen",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "node backend/server.js",
-    "dev": "concurrently \"yarn run server\" \"yarn run dev\"",
-    "server": "nodemon backend/server.js"
-  },
   "dependencies": {
-    "colors": "^1.4.0",
-    "concurrently": "^7.3.0",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-async-handler": "^1.2.0",
-    "fs": "^0.0.1-security",
-    "mongoose": "^6.4.6",
-    "path": "^0.12.7"
+    "@craco/craco": "^6.1.2",
+    "@reduxjs/toolkit": "^1.6.0",
+    "axios": "^0.21.1",
+    "firebase": "^9.9.1",
+    "firebase-admin": "^11.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-scripts": "^5.0.0",
+    "react-use": "^15.3.8",
+    "sass": "^1.32.5",
+    "swr": "^0.4.0",
+    "typescript": "^4.2.4",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "start": "craco start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "@types/jquery": "^3.5.14",
+    "@types/node": "^12.20.10",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-router": "^5.1.18",
+    "@types/react-router-dom": "^5.3.3",
+    "autoprefixer": "^9.8.6",
+    "nock": "^13.0.11",
+    "postcss": "^7.0.35",
+    "prettier": "2.7.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   }
 }
