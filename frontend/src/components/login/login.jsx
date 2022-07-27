@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Modal from "../Modal/Modal";
 
 function Login() {
   const [showLogin, setShowLogin] = useState(true);

@@ -2,32 +2,25 @@ const asyncHandler = require('express-async-handler')
 const path = require('path')
 const fs = require('fs')
 const colors = require('colors')
-const employees = require('../db/employees.json')
+const Employee = require('../model/employeeModel')
 
 //get employees from db
 //route GET /api/employees
 const getEmployees = asyncHandler(async (req, res) => {
-    //grab existingemployees from db
-    res.status(200).json(employees)
+    Employee.find().then((data) => {
+        res.status(200).json(data)
+    })
 
 })
 
 //add new employee to db
 //route POST /api/employees
 const setEmployee = asyncHandler(async (req, res) => {
-    const { name, id, email, officeNumber, gitHub, school } = req.body
-    const newEmployee = { name, id, email, officeNumber, gitHub, school }
-    const employeeArr = []
-    employeeArr.push(employees)
-    employeeArr.push(newEmployee)
-    const employeesString = JSON.stringify(employeeArr, null, 2)
-    fs.writeFileSync(path.join(__dirname, '../db/employees.json'), employeesString, (err) => {
-        err ? console.log(err) : console.log('employee added')
-    })
-    res.status(201).json(newEmployee)
     console.info('New employee added to db'.green)
-}
-)
+    Employee.create(req.body).then((data) => {
+        res.status(200).json(data)
+    })
+})
 //update employee from db by ID
 //route PUT /api/employees 
 const updateEmployee = asyncHandler(async (req, res) => {

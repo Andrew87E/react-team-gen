@@ -2,18 +2,9 @@ import Modal from "../Modal";
 import axios from "axios";
 import { useState, useEffect, useCallback } from "react";
 import $ from 'jquery';
-import firebaseConfig from '../../utils/firebase'
-import 'firebase/database'
-import firebase from 'firebase'
 
 export default function Engineer() {
-  
-firebase.initializeApp(firebaseConfig);
- 
-const createEmployee = () = > {
-
-
-}
+   
 
   return (
     <>
