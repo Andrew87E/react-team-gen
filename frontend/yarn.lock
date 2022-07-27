@@ -6355,6 +6355,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"front-end@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "front-end@workspace:."
+  dependencies:
+    "@craco/craco": ^6.1.2
+    "@reduxjs/toolkit": ^1.6.0
+    "@testing-library/jest-dom": ^5.12.0
+    "@testing-library/react": ^11.2.6
+    "@testing-library/user-event": ^12.8.3
+    "@types/jest": ^26.0.23
+    "@types/node": ^12.20.10
+    "@types/react": ^17.0.4
+    "@types/react-dom": ^17.0.3
+    "@types/react-redux": ^7.1.16
+    autoprefixer: ^9.8.6
+    axios: ^0.21.1
+    nock: ^13.0.11
+    postcss: ^7.0.35
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-redux: ^7.2.4
+    react-scripts: ^5.0.0
+    tailwindcss: "npm:@tailwindcss/postcss7-compat@^2.1.2"
+    typescript: ^4.2.4
+    web-vitals: ^1.1.1
+  languageName: unknown
+  linkType: soft
+
 "fs-extra@npm:^10.0.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
@@ -11741,34 +11769,6 @@ __metadata:
   checksum: bae1596873595c4610993fa84f86a3387d67586401c1816ea048c0196800c0646c4d2da98c2ee80557fd9eff05877efe33b91ba6cd052658ed96ddc85d19067d
   languageName: node
   linkType: hard
-
-"start-over-qq@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "start-over-qq@workspace:."
-  dependencies:
-    "@craco/craco": ^6.1.2
-    "@reduxjs/toolkit": ^1.6.0
-    "@testing-library/jest-dom": ^5.12.0
-    "@testing-library/react": ^11.2.6
-    "@testing-library/user-event": ^12.8.3
-    "@types/jest": ^26.0.23
-    "@types/node": ^12.20.10
-    "@types/react": ^17.0.4
-    "@types/react-dom": ^17.0.3
-    "@types/react-redux": ^7.1.16
-    autoprefixer: ^9.8.6
-    axios: ^0.21.1
-    nock: ^13.0.11
-    postcss: ^7.0.35
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-redux: ^7.2.4
-    react-scripts: ^5.0.0
-    tailwindcss: "npm:@tailwindcss/postcss7-compat@^2.1.2"
-    typescript: ^4.2.4
-    web-vitals: ^1.1.1
-  languageName: unknown
-  linkType: soft
 
 "statuses@npm:2.0.1":
   version: 2.0.1

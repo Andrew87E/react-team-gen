@@ -4,7 +4,7 @@ const API_URL = `/api/employee`;
 
 // import empoyees.json from API_URL to get the data
 const getEmployees = async () => {
-  const response = await axios.get("http://localhost:3001/api/employees");
+  const response = await axios.get("http://localhost:5000/api/employees");
   const employeeResponse = JSON.stringify(response.data, null, 2);
   console.log(employeeResponse);
   return employeeResponse;
