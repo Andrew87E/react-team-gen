@@ -1,3 +1,5 @@
 import { Employee } from './utils/Employee';
 
-test{}
+test('Employee ' , ()=>{
+    
+})
