@@ -8,7 +8,7 @@ export const JumbotronPage: React.FC = () => (
       <p>This is some text.</p>
       <p>This is another text.</p>
       <button className="text-sm px-6 py-1 mt-4 text-white active:bg-yellow-500 focus:outline-none border-solid border">
-        Learn more
+      Learn more  
       </button>
     </Jumbotron>
   );

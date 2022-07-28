@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import Manager from "./modal-forms/Manager";
 import Engineer from "./modal-forms/Engineer";
 import Intern from "./modal-forms/Intern";
-import $ from "jquery";
+import $ from 'jquery'
 
-
-export default function Modal() {
+export const Modal: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [formState, setFormState] = useState("");
   const [showmodalBtn, setModalButton] = useState(false);
@@ -108,4 +107,6 @@ export default function Modal() {
     </>
   );
 }
+
+
 // Language: typescript

@@ -1,10 +1,8 @@
-import Modal from "../Modal";
 import axios from "axios";
-import { useState, useEffect, useCallback } from "react";
-import $ from 'jquery';
+import $ from 'jquery'
 
 export default function Engineer() {
-   
+
 
   return (
     <>
@@ -75,13 +73,23 @@ export default function Engineer() {
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
         onClick={(e) => {
-            e.preventDefault()
-            // stuff will go here
-            $('#modal').hide();
-
-            console.log("stuff will go here" + e);
-
-          }}
+          e.preventDefault();
+          let name = $('#name').val();
+          let id = $('#id').val();
+          let email = $('#email').val()
+          let gitHub = $('#github').val()
+          axios.post('http://localhost:5000/api/employees',{
+          name: `${name}`,
+          id: `${id}`,
+          email: `${email}`,
+          gitHub: `${gitHub}`
+          })
+          .then((response)=>{
+            console.log(response)
+            $("#modal").hide();
+            location.reload();
+          })
+        }}
       >
         Submit
       </button>
