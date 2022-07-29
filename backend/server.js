@@ -6,7 +6,7 @@ const app = express();
 const connectDB = require('./config/db')
 const path = require('path')
 
-const publicPath = path.join(__dirname + '../', 'frontend', 'dist', 'index.html');
+const publicPath = path.join('../', 'frontend', 'dist', 'index.html');
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
