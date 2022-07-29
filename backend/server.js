@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/api/employees', require('./routes/employeeRoutes'));
 app.use(express.static(publicPath))
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
 
