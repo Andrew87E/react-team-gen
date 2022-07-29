@@ -5,14 +5,15 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import LoggedIn from "./Pages/LoggedIn";
-
+import Login from "./components/login/login";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<LoggedIn />} />
+        <Route path="/admin" element={<Login />} />
+        <Route path="/change" element={<LoggedIn />} />
       </Routes>
     <Footer />
     </BrowserRouter>
