@@ -6,14 +6,14 @@ const app = express();
 const connectDB = require('./config/db')
 const path = require('path')
 
-const publicPath = path.join('../frontend/dist');
+const publicPath = path.join(__dirname +'/frontend/dist/index.html');
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use('/api/employees', require('./routes/employeeRoutes'));
 app.use(express.static(publicPath))
 
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
 
