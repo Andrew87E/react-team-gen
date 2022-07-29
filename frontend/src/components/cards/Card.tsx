@@ -5,14 +5,10 @@ const Card: React.FC = () => {
   const [isLoading, setLoading] = useState(true);
   const [employees, setEmployees] = useState([]);
 
-  const baseurl = "http://localhost:";
-
   useEffect(() => {
-    axios.get(`${baseurl}5000/api/employees`).then((response) => {
+    axios.get('/api/employees').then((response) => {
       setEmployees(response.data);
-      console.log("RAW RESPONSE DATA:", response.data);
       setLoading(false);
-      console.log("STATE :", employees);
     });
   }, []);
 

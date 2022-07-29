@@ -1,6 +1,4 @@
 const asyncHandler = require('express-async-handler')
-const path = require('path')
-const fs = require('fs')
 const colors = require('colors')
 const Employee = require('../model/employeeModel')
 

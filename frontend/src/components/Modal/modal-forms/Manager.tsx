@@ -60,7 +60,7 @@ export default function Manager() {
           type="office-number"
           name="office-number"
           id="office-number"
-          placeholder="Manager@Company.com"
+          placeholder="1234567891"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
         />
       </div>
@@ -73,18 +73,21 @@ export default function Manager() {
           let id = $("#id").val();
           let email = $("#email").val();
           let officeNumber = $("#office-number").val();
+          if(!name || !id || !email || !officeNumber){
+            alert('Please enter all values')
+          } else { 
           axios
-            .post("http://localhost:5000/api/employees", {
+            .post("/api/employees", {
               name: `${name}`,
               id: `${id}`,
               email: `${email}`,
-              officeNumbr: `${officeNumber}`,
+              officeNumber: `${officeNumber}`,
             })
             .then((response) => {
               console.log(response);
               $("#modal").hide();
               location.reload();
-            });
+            })}
         }}
       >
         Submit
@@ -92,3 +95,5 @@ export default function Manager() {
     </>
   );
 }
+
+// language=TypeScript
