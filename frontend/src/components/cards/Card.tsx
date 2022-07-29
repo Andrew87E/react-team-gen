@@ -43,7 +43,7 @@ const Card: React.FC = () => {
           Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
             .substring(1))()}
-        className="w-full cursor-pointer rounded-md shadow-md shadow-gray-200 hover:shadow-blue-400/80 hover:shadow-2xl hover:bg-gray-50"
+        className="w-100 cursor-pointer rounded-md shadow-md shadow-gray-200 hover:shadow-blue-400/80 hover:shadow-2xl hover:bg-black-400"
       >
         <div className="p-4">
           <span className="text-blue-600 font-normal text-5xl">

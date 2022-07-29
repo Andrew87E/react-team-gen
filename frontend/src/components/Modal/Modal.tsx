@@ -8,6 +8,7 @@ export const Modal: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [formState, setFormState] = useState("");
   const [showmodalBtn, setModalButton] = useState(false);
+  const [loggedIn, setLoginButton] = useState(false)
   const selectedOption = $(".form-select");
   const selectedOptionValue = selectedOption.val();
 
@@ -27,7 +28,16 @@ export const Modal: React.FC = () => {
   };
 
   return (
-    <>
+  <>
+
+
+
+
+
+
+
+
+
       {showModal ? (
         <div
           id="modal"

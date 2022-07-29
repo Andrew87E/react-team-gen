@@ -1,0 +1,4 @@
+Use react router to change page from login screen back to home page
+
+use navbar to get to login screen
+

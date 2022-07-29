@@ -7,7 +7,7 @@ const Employee = require('../model/employeeModel')
 //get employees from db
 //route GET /api/employees
 const getEmployees = asyncHandler(async (req, res) => {
-    Employee.find().then((data) => {
+    Employee.find().sort({ officeNumber: -1, gitHub: -1 }).then((data) => {
         res.status(200).json(data)
     })
 
