@@ -15,3 +15,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <Footer />
   </React.StrictMode>
 );
+
+// need to add routes for log in page
