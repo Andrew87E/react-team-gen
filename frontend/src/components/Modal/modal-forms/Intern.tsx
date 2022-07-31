@@ -49,3 +49,5 @@ export default function Intern() {
 </>
 )
 }
+
+//sanitizer user input

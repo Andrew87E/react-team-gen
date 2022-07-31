@@ -97,3 +97,4 @@ export default function Manager() {
 }
 
 // language=TypeScript
+// sanitize user input
