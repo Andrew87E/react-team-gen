@@ -1,8 +1,9 @@
 import axios from "axios";
-import $ from 'jquery'
+import $, { data } from 'jquery'
+import { useState, useEffect } from "react";
 
 export default function Engineer() {
-
+  const [submit, setSubmit] = useState('')
 
   return (
     <>
@@ -90,7 +91,9 @@ export default function Engineer() {
           .then((response)=>{
             console.log(response)
             $("#modal").hide();
-            location.reload();
+            $('#cardContain').fadeOut(800, ()=>{
+              $('#cardContain').fadeIn().delay(2000)
+            })
           })}
         }}
       >

@@ -6,7 +6,7 @@ const Card: React.FC = () => {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/employees').then((response) => {
+    axios.get(`/api/employees`).then((response) => {
       setEmployees(response.data);
       setLoading(false);
     });
@@ -83,7 +83,7 @@ const Card: React.FC = () => {
     );
   } else {
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen" id="cardContain">
         <p className="text-center text-white text-4xl font-semibold py-4">
           Meet Our Team!
         </p>
