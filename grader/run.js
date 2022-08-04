@@ -3,6 +3,8 @@ const fs = require("fs");
 const Manager = require("./utils/Manager");
 const Engineer = require("./utils/Engineer");
 const Intern = require("./utils/Intern");
+const axios = require('axios')
+
 let emptyArr = [];
 // const Employee = require("./Employee");
 // const render = require("./htmlRenderer");
@@ -101,7 +103,7 @@ const questions = () => {
           engineerAnswers.engineerEmail,
           engineerAnswers.engineerGitHub
         );
-          emptyArr.push(newEngineer)
+        emptyArr.push(newEngineer)
         questions();
       });
     } else if (selectAnswers.addTeamMember === "Intern") {
@@ -112,19 +114,21 @@ const questions = () => {
           internAnswers.internEmail,
           internAnswers.internSchool
         );
-          emptyArr.push(newIntern)
+        emptyArr.push(newIntern)
         questions();
       });
     } else {
       const employeesString = JSON.stringify(emptyArr, null, 2);
-      fs.writeFile("./employees.json", employeesString, (err) => {
-        err ? console.log(err) : console.log("Team Complete!")
-      });
-      return;
-    }
+      axios.post('/api/employees', employeesString).then((response) => {
+        console.log(response)
+      })
+      // fs.writeFile("./employees.json", employeesString, (err) => {
+      //   err ? console.log(err) : console.log("Team Complete!")
+    };
+    // return;
   });
-
 }
+
 
 
 (() => {
@@ -135,7 +139,7 @@ const questions = () => {
       managerAnswers.managerEmail,
       managerAnswers.managerOfficeNumber
     );
-      emptyArr.push(newManager)
+    emptyArr.push(newManager)
     questions();
   });
 })();

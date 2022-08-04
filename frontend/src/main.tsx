@@ -15,10 +15,13 @@ type State = {
   isLoggedIn: boolean;
 };
 
+const user:any = localStorage.getItem("key");
+
+
 // conditional render elements
 class App extends React.Component<Props, State> {
     public state = {
-      isLoggedIn: false,
+      isLoggedIn:  JSON.parse(user) || false,
     };
 
   renderPage() {

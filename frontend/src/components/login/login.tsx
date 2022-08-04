@@ -22,15 +22,20 @@ export default class Login extends React.Component<Props, State> {
     showLogModal: false,
   };
 
+  //use redux
 
   handleSubmit() {
     const pass = $("#password").val();
     const userName = $("#userName").val();
 
     if (userName === "grader" || ("Grader" && pass === "GiveMea100!!")) {
-      this.props.changeLogInState();
+      this.props.changeLogInState(true);
       this.setState({ showLogModal: false });
       this.setState({ isLoggedIn: true });
+      console.log("35", this.state.isLoggedIn)
+      const sess = () =>{
+        
+      }
     } else {
       alert("We didn't find that User Name & Password combination");
     }
@@ -122,7 +127,7 @@ export default class Login extends React.Component<Props, State> {
         {this.state.isLoggedIn ? null : (
           <button
             className="inline-flex justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button"
+            type="button" 
             onClick={() => this.setState({ showLogModal: true })}
           >
             LogIn

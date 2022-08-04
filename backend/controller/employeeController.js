@@ -8,7 +8,6 @@ const getEmployees = asyncHandler(async (req, res) => {
     Employee.find().sort({ officeNumber: -1, gitHub: -1 }).then((data) => {
         res.status(200).json(data)
     })
-
 })
 
 //add new employee to db
@@ -19,6 +18,7 @@ const setEmployee = asyncHandler(async (req, res) => {
         res.status(200).json(data)
     })
 })
+
 //update employee from db by ID
 //route PUT /api/employees 
 const updateEmployee = asyncHandler(async (req, res) => {
