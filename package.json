@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "node backend/server.js",
-    "thisDontWork": "concurrently \" npm run server \" \"sleep 2 && npm run runThis\" ",
+    "thisDontWork": "concurrently \" npm run server \" \"sleep 2 && npm run grader\" ",
     "server": "nodemon backend/server.js",
     "grader": "node grader/run.js"
   },
