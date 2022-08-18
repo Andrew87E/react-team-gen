@@ -9,8 +9,9 @@
   "private": true,
   "scripts": {
     "start": "node backend/server.js",
-    "dev": "concurrently \"yarn run server\" \"yarn run dev\"",
-    "server": "nodemon backend/server.js"
+    "thisDontWork": "concurrently \" npm run server \" \"sleep 2 && npm run runThis\" ",
+    "server": "nodemon backend/server.js",
+    "grader": "node grader/run.js"
   },
   "dependencies": {
     "axios": "^0.27.2",

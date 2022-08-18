@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/jquery": "^3.5.14",
     "axios": "^0.27.2",
     "jquery": "^3.6.0",
     "react": "^18.2.0",
@@ -18,6 +17,7 @@
     "react-scripts": "latest"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.14",
     "@types/node": "^18.6.2",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",

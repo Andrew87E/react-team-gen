@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Manager from "./modal-forms/Manager";
 import Engineer from "./modal-forms/Engineer";
 import Intern from "./modal-forms/Intern";
-import $ from 'jquery'
+import $ from 'jQuery'
 
 export const Modal: React.FC = () => {
   const [showModal, setShowModal] = useState(false);

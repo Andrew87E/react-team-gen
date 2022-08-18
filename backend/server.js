@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 // connect to db before starting server
 connectDB.once('open', () => {
   app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`.rainbow);
+    console.log(`Server is running @ http://localhost:${PORT}`.rainbow);
   })
 })
 

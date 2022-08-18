@@ -1,5 +1,5 @@
 import axios from "axios";
-import $, { data } from 'jquery'
+import $, { data } from 'jQuery'
 import { useState, useEffect } from "react";
 
 export default function Engineer() {
