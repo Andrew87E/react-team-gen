@@ -70,7 +70,7 @@
 <br>
 
 
-## This project was my introduction to the MERN stack. It was a project I built to learn React, Typescript, Tailwindcss and MongoDB.
+## This project was my introduction to the MERN stack. It was a project I built to learn React, Typescript, Tailwindcss and MongoDB. It's built with Vite, React, MongoDB, Express, Axios, Tailwindcss, and Typescript!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
