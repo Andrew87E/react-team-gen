@@ -158,7 +158,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@secret8squirrel](https://twitter.com/secret8squirrel) - email - andrew@edwards.codes.com
+Andrew Edwards: email - andrew@edwards.codes.com
 
 Project Link: [https://github.com/andrew87e/react-team-gen](https://github.com/andrew87e/react-team-gen)
 
